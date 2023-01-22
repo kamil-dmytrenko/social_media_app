@@ -1,0 +1,186 @@
+body {
+  height: 100vh;
+  background: url("../../assets/Sea\ of\ Clouds-6.7s-3000px.svg");
+  background-size: cover;
+}
+.container {
+}
+.card {
+  position: absolute;
+  display: flex;
+  border-radius: 10px;
+  min-height: 600px;
+  overflow: hidden;
+  box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  width: 40%;
+  top: 20%;
+  left: calc(50% - 400px);
+}
+.right {
+  display: flex;
+  flex: 1;
+  background: linear-gradient(rgba(38, 148, 170, 0.5), rgba(38, 148, 170, 0.5)),
+    url("https://images.pexels.com/photos/7884720/pexels-photo-7884720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+      center;
+  backdrop-filter: blur(2px);
+  background-size: cover;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: rgb(255, 255, 255);
+
+  h1 {
+    font-size: 100px;
+    line-height: 100px;
+  }
+  p {
+  }
+  span {
+    font-size: 14px;
+  }
+  button {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    background-color: white;
+    color: rgb(52, 19, 117);
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+.left {
+  display: flex;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex: 1;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  justify-content: center;
+  h1 {
+    color: #555;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    input {
+      border: none;
+      border-bottom: 1px solid #000;
+      padding: 20px 10px;
+    }
+    button {
+      width: 50%;
+      padding: 10px;
+      border: none;
+      background-color: purple;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+.signIn {
+  z-index: 1;
+  transform: perspective(100px) translate3d(0px, 0px, -30px);
+  opacity: 0.5;
+}
+.signUp {
+  z-index: 2;
+}
+.active-dx {
+  animation-name: foregrounding-dx;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.active-sx {
+  animation-name: foregrounding-sx;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.inactive-dx {
+  animation-name: overshadowing-dx;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+
+.inactive-sx {
+  animation-name: overshadowing-sx;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+}
+@keyframes overshadowing-dx {
+  0% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(50%, 0px, -15px);
+    opacity: 0.5;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(0px, 0px, -30px);
+    opacity: 0;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes overshadowing-sx {
+  0% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+    box-shadow: 0 10px 50px 0 rgba(0, 0, 0, 0.25);
+  }
+  50% {
+    transform: perspective(100px) translate3d(-50%, 0px, -30px);
+  }
+  100% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(-100px, 0px, -30px);
+    opacity: 0;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.25);
+  }
+}
+
+@keyframes foregrounding-dx {
+  0% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(0px, 0px, -30px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: perspective(100px) translate3d(400px, 0px, -15px);
+  }
+  100% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes foregrounding-sx {
+  0% {
+    z-index: 1;
+    transform: perspective(100px) translate3d(0px, 0px, -30px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: perspective(100px) translate3d(-400px, 0px, -15px);
+  }
+  100% {
+    z-index: 2;
+    transform: perspective(100px) translate3d(0px, 0px, 0px);
+    opacity: 1;
+  }
+}
