@@ -8,7 +8,8 @@ import {
 import { Footer, Navbar, RightBar, LeftBar } from "./components";
 import { LoginRegister, Home, Profile } from "./pages";
 
-import LoginRegister from "./pages/loginRegister/LoginRegister";
+function App() {
+  const { currentUser } = false;
   const Layout = () => {
     return (
       <div>
@@ -25,6 +26,13 @@ import LoginRegister from "./pages/loginRegister/LoginRegister";
     );
   };
 
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to="/login_register" />;
+    }
+
+    return children;
+  };
 
 const router = createBrowserRouter([
   {
