@@ -41,7 +41,7 @@ const Card = () => {
   );
   const RegisterCardInfo = () => (
     <div className="right">
-      <h1>Lama Social.</h1>
+      <h1>New Social.</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero cum,
         alias totam numquam ipsa exercitationem dignissimos, error nam,
