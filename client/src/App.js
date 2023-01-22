@@ -34,14 +34,31 @@ function App() {
     return children;
   };
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <LoginRegister />,
-  },
-]);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <ProtectedRoute>
+          <Layout />
+        </ProtectedRoute>
+      ),
+      children: [
+        {
+          path: "/",
+          element: <Home />,
+        },
+        {
+          path: "/profile/:id",
+          element: <Profile />,
+        },
+      ],
+    },
+    {
+      path: "/login_register",
+      element: <LoginRegister />,
+    },
+  ]);
 
-function App() {
   return (
     <>
       <RouterProvider router={router} />
