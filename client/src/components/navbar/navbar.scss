@@ -1,2 +1,55 @@
 .navbar {
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid #d3d3d3;
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      a {
+        color: #00008b;
+        text-decoration: none;
+        text-decoration-color: black;
+      }
+      a:active {
+        color: gray;
+      }
+      &__logo {
+        font-weight: bold;
+        font-size: 20px;
+        color: #00008b;
+      }
+      &__search {
+        display: flex;
+        align-items: center;
+
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        padding: 5px;
+        input {
+          border: none;
+          width: 500px;
+          background-color: transparent;
+          color: themed("textColor");
+        }
+      }
+      &__user {
+        display: flex;
+        align-items: center;
+        row-gap: 10px;
+        column-gap: 10px;
+        gap: 10px;
+        font-weight: 500;
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
