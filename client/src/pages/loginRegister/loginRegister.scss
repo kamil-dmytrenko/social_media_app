@@ -1,9 +1,7 @@
-body {
+.container {
   height: 100vh;
   background: url("../../assets/Sea\ of\ Clouds-6.7s-3000px.svg");
   background-size: cover;
-}
-.container {
 }
 .card {
   position: absolute;
@@ -15,71 +13,74 @@ body {
   width: 40%;
   top: 20%;
   left: calc(50% - 400px);
-}
-.right {
-  display: flex;
-  flex: 1;
-  background: linear-gradient(rgba(38, 148, 170, 0.5), rgba(38, 148, 170, 0.5)),
-    url("https://images.pexels.com/photos/7884720/pexels-photo-7884720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
-      center;
-  backdrop-filter: blur(2px);
-  background-size: cover;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  color: rgb(255, 255, 255);
-
-  h1 {
-    font-size: 100px;
-    line-height: 100px;
-  }
-  p {
-  }
-  span {
-    font-size: 14px;
-  }
-  button {
-    width: 50%;
-    padding: 10px;
-    border: none;
-    background-color: white;
-    color: rgb(52, 19, 117);
-    font-weight: bold;
-    cursor: pointer;
-  }
-}
-.left {
-  display: flex;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  flex: 1;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  justify-content: center;
-  h1 {
-    color: #555;
-  }
-  form {
+  .right {
+    display: flex;
+    flex: 1;
+    background: linear-gradient(
+        rgba(38, 148, 170, 0.5),
+        rgba(38, 148, 170, 0.5)
+      ),
+      url("https://images.pexels.com/photos/7884720/pexels-photo-7884720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+        center;
+    backdrop-filter: blur(2px);
+    background-size: cover;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    input {
-      border: none;
-      border-bottom: 1px solid #000;
-      padding: 20px 10px;
+    color: rgb(255, 255, 255);
+
+    h1 {
+      font-size: 100px;
+      line-height: 100px;
+    }
+    p {
+    }
+    span {
+      font-size: 14px;
     }
     button {
       width: 50%;
       padding: 10px;
       border: none;
-      background-color: purple;
-      color: white;
+      background-color: white;
+      color: rgb(52, 19, 117);
       font-weight: bold;
       cursor: pointer;
+    }
+  }
+  .left {
+    display: flex;
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    h1 {
+      color: #555;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      input {
+        border: none;
+        border-bottom: 1px solid #000;
+        padding: 20px 10px;
+      }
+      button {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: purple;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
     }
   }
 }

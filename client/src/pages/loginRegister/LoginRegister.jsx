@@ -3,7 +3,6 @@ import "./loginRegister.scss";
 
 const Card = () => {
   const [isLogin, setIsLogin] = useState(true);
-  const [isAnimation, setIsAnimation] = useState(false);
 
   const LoginCardForm = () => (
     <div className="left">
