@@ -1,2 +1,97 @@
-.leftbar {
+.aside-container {
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+  overflow: scroll;
+  background-color: white;
+  color: black;
+  hr {
+    margin: 20px 0px;
+    border: none;
+    height: 0.5px;
+    background-color: grey;
+  }
+  .menu-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__header {
+      font-size: 12px;
+    }
+    &__user {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      cursor: pointer;
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      span {
+        font-size: 14px;
+      }
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      img {
+        width: 30px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  .shortcuts-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__header {
+      font-size: 12px;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      img {
+        width: 30px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  .others-section {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__header {
+      font-size: 12px;
+    }
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      img {
+        width: 30px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
 }
