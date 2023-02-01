@@ -4,6 +4,10 @@
   top: 70px;
   height: calc(100vh - 70px);
   overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   background-color: white;
   color: black;
   hr {
@@ -13,6 +17,7 @@
     background-color: grey;
   }
   .menu-section {
+    list-style: none;
     padding: 20px;
     display: flex;
     flex-direction: column;
