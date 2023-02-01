@@ -1,4 +1,4 @@
-.aside-container {
+.aside-container-left {
   flex: 2;
   position: sticky;
   top: 70px;
@@ -7,9 +7,6 @@
   &::-webkit-scrollbar {
     display: none;
   }
-
-  background-color: white;
-  color: black;
   hr {
     margin: 20px 0px;
     border: none;
@@ -17,7 +14,6 @@
     background-color: grey;
   }
   .menu-section {
-    list-style: none;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -25,33 +21,41 @@
     &__header {
       font-size: 12px;
     }
-    &__user {
+    .menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 500;
-      cursor: pointer;
-      img {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        object-fit: cover;
+      flex-direction: column;
+      gap: 20px;
+      &__user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        cursor: pointer;
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+        span {
+          font-size: 14px;
+        }
       }
-      span {
-        font-size: 14px;
-      }
-    }
-    &__item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      img {
-        width: 30px;
-      }
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        img {
+          width: 30px;
+        }
 
-      span {
-        font-size: 14px;
+        span {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -63,17 +67,26 @@
     &__header {
       font-size: 12px;
     }
-    &__item {
+    .shortcuts {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      img {
-        width: 30px;
-      }
+      flex-direction: column;
+      gap: 20px;
 
-      span {
-        font-size: 14px;
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        img {
+          width: 30px;
+        }
+
+        span {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -85,17 +98,25 @@
     &__header {
       font-size: 12px;
     }
-    &__item {
+    .others {
+      list-style: none;
+      margin: 0;
+      padding: 0;
       display: flex;
-      align-items: center;
-      gap: 10px;
-      cursor: pointer;
-      img {
-        width: 30px;
-      }
+      flex-direction: column;
+      gap: 20px;
+      &__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        img {
+          width: 30px;
+        }
 
-      span {
-        font-size: 14px;
+        span {
+          font-size: 14px;
+        }
       }
     }
   }
